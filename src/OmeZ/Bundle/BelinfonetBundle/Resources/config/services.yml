@@ -1,4 +1,12 @@
 services:
+
+    omez_belinfonet.http_client: 
+        class: GuzzleHttp\Client
+
+    omez_belinfonet.website_client: 
+        class: OmeZ\Bundle\BelinfonetBundle\Service\WebsiteCrawler
+        arguments: ["@omez_belinfonet.http_client"]
+  
 #    ome_z_belinfonet.example:
 #        class: OmeZ\Bundle\BelinfonetBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
