@@ -1,0 +1,21 @@
+parameters:
+    seasonvar.node.executable: node
+
+services:
+  
+    seasonvar.http.cache.backend:
+        public: false
+        class: Doctrine\Common\Cache\FilesystemCache
+        arguments: ["%kernel.cache_dir%/%kernel.environment%/seasonvar_cache"]
+  
+    seasonvar.webclient.decoder.player:
+        class: OmeZ\Bundle\SeasonvarBundle\WebClient\Decoder\PlayerDecoder
+        arguments: ["%seasonvar.node.executable%"]
+        
+    seasonvar.webclient:
+        class: OmeZ\Bundle\SeasonvarBundle\WebClient\ContentClient
+        arguments: ["@seasonvar.http.cache.backend", "@seasonvar.webclient.decoder.player"]
+        
+    #seasonvar.webdav.listener:
+    #    class: OmeZ\Bundle\SeasonvarBundle\EventDispatcher\WebDavListener
+    #    arguments: ["@http_utils"]

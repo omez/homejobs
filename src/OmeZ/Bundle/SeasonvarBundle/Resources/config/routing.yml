@@ -1,0 +1,3 @@
+ome_z_seasonvar_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: OmeZSeasonvarBundle:Default:index }

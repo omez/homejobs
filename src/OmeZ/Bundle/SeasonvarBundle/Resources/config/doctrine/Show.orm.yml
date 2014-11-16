@@ -1,0 +1,17 @@
+OmeZ\Bundle\SeasonvarBundle\Entity\Show:
+    type: entity
+    table: shows
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+            
+        titleOriginal:
+            name: title_original
+            type: string
+            length: 255

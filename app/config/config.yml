@@ -72,8 +72,8 @@ swiftmailer:
     spool:     { type: memory }
 
 ## Belinfonet bundle configuration    
-#belinfonet:
-#    username: "%belinfonet_username%"
-#    password: "%belinfonet_password%"    
+belinfonet:
+    username: "%belinfonet_username%"
+    password: "%belinfonet_password%"    
 #    email: "%belinfonet_notify%"
     
