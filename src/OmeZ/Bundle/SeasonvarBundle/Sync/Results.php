@@ -8,7 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * 
  * @author Alexander Sergeychik
  */
-class UnitOfWork {
+class Results {
 	
 	const COLLECTION_REMOVALS = 'remove';
 	const COLLECTION_UPDATES = 'update';

@@ -16,6 +16,13 @@ class Season {
 	private $id;
 	
 	/**
+	 * Original seasonvar season ID
+	 * 
+	 * @var integer
+	 */
+	protected $originalId;
+	
+	/**
 	 * Show reference
 	 * 
 	 * @var Show
